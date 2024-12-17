@@ -1,0 +1,367 @@
+import os
+def panghello():
+    print("\nHello IT1C")
+
+def Activity2():
+    num1= eval(input("\nPlease input a number: "))
+    num2 =eval(input("Please input another number: "))
+    print("\n", num1, "Floor divided to ", num1 , " = " , num1 // num2)
+
+def Activity4():
+    num1= eval(input("Enter a number-->"))
+
+    num2= eval(input("Enter another number -->"))
+
+    add= num1+num2
+    minus= num1-num2
+    times= num1*num2
+    divide=num1/num2
+
+    print("The sum of" , num1, "and ", num2, "is " ,add )
+    print("The difference of" , num1, "and ", num2, "is " ,minus )
+    print("The product of" , num1, "and ", num2, "is " ,times )
+    print("The quotient of" , num1, "and ", num2, "is " ,divide)
+    
+def Activity5():
+    temp=int(input("Enter temperature in Farenheit:"))
+
+    cel =(temp-32)*5/9
+    round=(round(cel,2))
+
+    print(f"The conversion of {temp} degrees fahrenheit is {round} degrees celcuis")
+    
+def Activity6():
+    x=5
+    print(x)
+
+    x=x+10
+
+    print(x)
+
+    x=x+20
+
+    print(x)
+
+
+    x=x+30
+
+    print(x)
+
+def Activity7():
+    #conditional statements
+    gold=0
+
+    min= input("Hola! Please enter your name-->")
+
+    #answerable by yes or no
+
+    ismine=input("Did you mine gold today??")
+
+    #introduction to decision structure and relational operators
+    if ismine.lower()=="yes":
+        gold+=1
+        print(f"Hi{min}, today you have a total of {gold} gold")
+    else:
+        print(f"Hi{min}, today you have a total of {gold} gold")
+
+def Activity8():
+    password = input ("enter your password -->: ") 
+
+
+    if password.lower() == "arete":
+        print("Access Granted")
+        print("Enjoy using the system")
+    elif password.lower() == "lol":
+        print ("Access Granted")
+    elif password.lower() =="ror":
+        print("Access Denied")
+        print("Charot")
+    else:
+        print ("Access Denied") 
+    print("Sytem Exit")
+
+def Activity9():
+    age= eval(input(" Enter your age here---> "))
+
+    if age >= 1 and age <= 7 :
+        print ("Your a toddler")
+    elif age >= 8 and age <= 13 :
+        print("Your a Pre-teen")
+    elif age >= 14 and age <= 18 :
+        print ("Your a Teenager")
+    elif age >= 19 and age <= 31 :
+        print("Your in Early Adulthood")
+    elif age >= 32 and age <=45  :
+        print ("Your in Mid Adulthood")
+    elif age >= 46 and age <= 59 :
+        print ("Your in Post Adultood")
+    elif age >= 60 :
+        print ("Your a Senior")
+    else:
+        print("Invalid age")
+
+def Activity10():
+    DLL= input("Are you a current student of DLL [yes / no] :")
+
+    if DLL.lower()== "yes":
+        print("welcome to Dalubhasaan ng Lungsod ng Lucena")
+        isBSIT= input("Are you currently enrolled in Bachelor of Science in Information Technology? [yes / no]")
+        
+        if isBSIT.lower() =="yes":
+            print("What a Beautiful Day. Glad to have you in BSIT")
+            print("Please fill up the second form")
+            
+            isLevel= input("What current year level are you right now in DLL? \n F-FRESHMEN \n S-SOPHOMORE \n J-JUNIOR \n SS-SENIOR \n Please input your answer here-->")
+            if isLevel.lower()=="f":
+                print("WELCOME FRESHMEN")
+            elif isLevel.lower()=="s":
+                print("WELCOME SOPHOMORE")
+            elif isLevel.lower()=="j":
+                print("WELCOME JUNIOR")
+            elif isLevel.lower()=="ss":
+                print("WELCOME SENIOR")                
+                
+        else:
+            print("Sorry you are not welcome here")
+                    
+    else:
+        print("Thanks for stopping by ^_^")
+            
+
+def Activity11():
+    #print Marvelous 10 times
+
+    for x in range (1,20):
+        print("Marvelous")
+        print("Hi!")
+    
+
+def Activity12():
+    for x in range(10,1,-1):
+        print(x)
+
+def Activity13():
+
+    Factorial = 1
+    factor= eval(input(f"Enter a number:"))
+    for x in range (factor, 0,-1):
+        factor *= x
+        
+    print (factor)
+
+
+    for x in range (1,6):
+        for z in range (1,x+1):
+            print (" ",end=" ")
+        
+        for y in range (6,x,-1):
+            print ("*",end= " ")
+        
+        for a in range (5,x,-1):
+            print ("*",end= " ")
+        print ()
+        
+def Activity14():
+    #for  x in range 
+
+    for x in range (1, 15):
+        #print (x, end= "+")
+        print(x, end= "")
+        for y in range (1,15):
+            print("*", end= "")
+        print("\n")
+        
+    for x in range (0,10):
+        print("@", end= "")
+        for y in range (0,10):
+            print(x, end= "")
+        print("")
+
+def Activity15():
+    for x in range (0,11):
+        print(x,"\t", end= " ")
+        for y in range (0,x):
+            print("*", end= " ")
+        print()
+        
+        
+    for x in range (10,0,-1):
+        for y in range (0, x):
+            print(" * ", end= " ")
+        print()
+
+def Activity16():
+    for x in range (1,6):
+        for y in range(1,x+1):
+            print(" ", end=" ")
+        for z in range (6,x,-1):
+            print("*", end=" ")
+        for a in range (6,x,-1):
+            print ("*", end=" ")
+        print()
+        
+def Activity17():
+    #create a multiplication table
+
+    column= eval(input("Enter number of columns-->"))
+    for x in range (1,11):
+        for y in range (1, column+1):
+            print(f"{x} x {y} = {x*y}", end ="\t")
+        print()
+
+def Activity18():
+    #repeated triangle
+
+    nt= eval(input("Enter number of triangle--> "))
+    for x in range (1,5):
+        for r in range (1,nt+1):
+            for y in range (1,x+1):
+                print ("*", end=" ")
+            for z in range (5,x,-1):
+                print (" ", end=" ")
+        print()
+
+def Activity19():
+    import os
+    tuloy= True
+    os.system('cls')
+
+    while tuloy ==True:
+        name = input("Please enter a name-->")
+        
+        if name.lower() =="stop":
+            print("Program Terminated")
+            break
+            tuloy= False
+        else:
+            continue
+
+
+def Activity20():
+    isContinue = True
+    nt = 0
+    import os
+    while isContinue == True:
+        ask =input (" Would you like to add another triangle (y/n) -->")
+        
+        if ask.lower() == "no":
+            print("Program Terminated")
+            break
+            isContinue =False
+        elif ask.lower()=="yes":
+            os.system('cls')
+            nt +=1
+            for x in range(1,5):
+                for y in range (1, nt +1):
+                    for z in range (1,x+1):
+                        print("*", end=" ")
+                    for a in range (5,x,-1):
+                        print(" ", end=" ")
+                    print(end=" ")
+                print()
+            continue
+        
+        else:
+            print("TRY AGAIN")
+            continue
+
+def Activity21():
+    #keep on asking for a name until user types stop, once stop provide the number of names
+
+    go =True
+    count=0
+    while go== True:
+        name=input("Please enter a name:")
+        
+        if name.lower() =="stop":
+            print("Loop has now stooped")
+            print(f"You have entered {count} number of names")
+            break
+            go == False
+        else:
+            count+=1
+            continue
+
+
+        
+isContinue =True
+
+while isContinue:
+    
+    print("\n\t SELECT FROM THE FOLLOWING CODE \n\t 1= PANG HELLO \n\t 2= DIVISION PROGRAM \n\t 3= ACT 2"
+          "\n\t 4= ACT 4 \n\t 5= ACT 5 \n\t 6= ACT 6 \n\t 7= ACT 7 \n\t 8= ACT 8"
+          "\n\t 9= ACT 9 \n\t 10= ACT 10 \n\t 11= ACT 12 \n\t 13= ACT 13 \n\t 14= ACT 14 \n\t 15= ACT 15"
+          "\n\t 16= ACT 16 \n\t 17= ACT 17 \n\t 18= ACT 18 \n\t 19= ACT 19 \n\t 20= ACT 20"
+          "\n\t 21= ACT 21 \n\t 22= EXIT")
+    
+    ask =input("\nWhich program would you like to run, select from the options above?")
+    os.system("cls")
+
+    if ask =="1":
+        panghello()
+        continue
+    elif ask =="2":
+        pass
+    elif ask =="3":
+        Activity2()
+        continue
+    elif ask =="4":
+        Activity4()
+        continue
+    elif ask =="5":
+        Activity5()
+        continue
+    elif ask =="6":
+        Activity6()
+        continue
+    elif ask =="7":
+        Activity7()
+        continue
+    elif ask =="8":
+        Activity8()
+        continue
+    elif ask =="9":
+        Activity9()
+        continue
+    elif ask =="10":
+        Activity10()
+        continue
+    elif ask =="11":
+        Activity11()
+        continue
+    elif ask =="12":
+        Activity12()
+        continue
+    elif ask =="13":
+        Activity13()
+        continue
+    elif ask =="14":
+        Activity14()
+        continue
+    elif ask =="15":
+        Activity15()
+        continue
+    elif ask =="16":
+        Activity16()
+        continue
+    elif ask =="17":
+        Activity17()
+        continue
+    elif ask =="18":
+        Activity18()
+        continue
+    elif ask =="19":
+        Activity19()
+        continue
+    elif ask =="20":
+        Activity20()
+        continue
+    elif ask =="21":
+        Activity21()
+        continue
+    elif ask =="22":
+        print("\nProgram Terminated")
+        break
+    else:
+        print("Invalid Choice")
+        continue
